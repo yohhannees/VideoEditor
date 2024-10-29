@@ -1,152 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const token = localStorage.getItem('token');
-            if (!token) {
-                alert('You must be logged in to access this page.');
-                window.location.href = 'login.html';
-            }
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem("token");
+        if (!token) {
+          alert("You must be logged in to access this page.");
+          window.location.href = "login.html";
+        }
+      });
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristina Gomez Video Editor</title>
-	<meta name="description" content="Cristina Gomez, una talentosa editora de video con años de experiencia en la creación de contenido visual impactante y creativo.">
-	<meta property="og:title" content="Cristina Gomez Video Editor">
-	<meta property="og:description" content="Cristina Gomez, una talentosa editora de video con años de experiencia en la creación de contenido visual impactante y creativo.">
-	<meta property="og:url" content="https://www.crisgova.org/">
-	<meta property="og:type" content="website">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yared Abraham Video Editor</title>
+    <meta
+      name="description"
+      content="Cristina Gomez, una talentosa editora de video con años de experiencia en la creación de contenido visual impactante y creativo."
+    />
+    <meta property="og:title" content="Cristina Gomez Video Editor" />
+    <meta
+      property="og:description"
+      content="Cristina Gomez, una talentosa editora de video con años de experiencia en la creación de contenido visual impactante y creativo."
+    />
+    <meta property="og:url" content="https://www.crisgova.org/" />
+    <meta property="og:type" content="website" />
     <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            padding: 50px;
-        }
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 50px;
+      }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
 
-        form {
-            max-width: 600px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-        }
+      form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
 
-        label,
-        input,
-        textarea,
-        button {
-            margin-bottom: 1em;
-            color: #fff;
-        }
+      label,
+      input,
+      textarea,
+      button {
+        margin-bottom: 1em;
+        color: #fff;
+      }
 
-        input,
-        textarea {
-            background-color: #333;
-            border: 1px solid #666;
-            padding: 10px;
-            color: #fff;
-            border-radius: 5px;
-        }
+      input,
+      textarea {
+        background-color: #333;
+        border: 1px solid #666;
+        padding: 10px;
+        color: #fff;
+        border-radius: 5px;
+      }
 
-        button {
-            background-color: #00f;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+      button {
+        background-color: #00f;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-        button:hover {
-            background-color: #00a;
-        }
+      button:hover {
+        background-color: #00a;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Create New Blog Post</h1>
     <button id="logout-button">Logout</button>
 
     <form id="create-post-form" enctype="multipart/form-data">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required />
 
-        <label for="category">Category:</label>
-        <input type="text" id="category" name="category" required>
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" required />
 
-        <label for="imageFile">Image File:</label>
-        <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+      <label for="imageFile">Image File:</label>
+      <input
+        type="file"
+        id="imageFile"
+        name="imageFile"
+        accept="image/*"
+        required
+      />
 
-        <label for="imageFile2">Second Image File:</label>
-        <input type="file" id="imageFile2" name="imageFile2" accept="image/*" required>
+      <label for="imageFile2">Second Image File:</label>
+      <input
+        type="file"
+        id="imageFile2"
+        name="imageFile2"
+        accept="image/*"
+        required
+      />
 
-        <label for="video">Video URL:</label>
-        <input type="url" id="video" name="videoUrl">
+      <label for="video">Video URL:</label>
+      <input type="url" id="video" name="videoUrl" />
 
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" rows="10" required></textarea>
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" rows="10" required></textarea>
 
-        <label for="content2">Additional Content:</label>
-        <textarea id="content2" name="content2" rows="10"></textarea>
+      <label for="content2">Additional Content:</label>
+      <textarea id="content2" name="content2" rows="10"></textarea>
 
-        <label for="content3">Additional Content:</label>
-        <textarea id="content3" name="content3" rows="10"></textarea>
+      <label for="content3">Additional Content:</label>
+      <textarea id="content3" name="content3" rows="10"></textarea>
 
-        <button type="submit">Create Post</button>
+      <button type="submit">Create Post</button>
     </form>
 
     <script>
-        document.getElementById('create-post-form').addEventListener('submit', function (event) {
-            event.preventDefault();
+      document
+        .getElementById("create-post-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-            const form = document.getElementById('create-post-form');
-            const formData = new FormData(form);
+          const form = document.getElementById("create-post-form");
+          const formData = new FormData(form);
 
-            fetch('https://crisgova.adaptable.app/api/posts', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        return fetch('https://crisgova.adaptable.app/api/posts/page', {
-                            method: 'POST',
-                            body: JSON.stringify({ pageName: document.getElementById('pageName').value, ...data }),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        });
-                    } else {
-                        throw new Error('Error creating post.');
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert('Post and page created successfully!');
-                    window.location.href = `/posts/${data.pageName}.html`;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Post and page created successfully!');
-                })
-                .finally(() => {
-                    form.reset();  
+          fetch("https://crisgova.adaptable.app/api/posts", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                return fetch("https://crisgova.adaptable.app/api/posts/page", {
+                  method: "POST",
+                  body: JSON.stringify({
+                    pageName: document.getElementById("pageName").value,
+                    ...data,
+                  }),
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
                 });
+              } else {
+                throw new Error("Error creating post.");
+              }
+            })
+            .then((response) => response.json())
+            .then((data) => {
+              alert("Post and page created successfully!");
+              window.location.href = `/posts/${data.pageName}.html`;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Post and page created successfully!");
+            })
+            .finally(() => {
+              form.reset();
+            });
         });
 
-        document.getElementById('logout-button').addEventListener('click', function () {
-            localStorage.removeItem('token');
-            window.location.href = 'login.html';
+      document
+        .getElementById("logout-button")
+        .addEventListener("click", function () {
+          localStorage.removeItem("token");
+          window.location.href = "login.html";
         });
     </script>
-</body>
-
+  </body>
 </html>
